@@ -1,9 +1,14 @@
+@import "../../style.scss";
+
 .rightbar{
+  @include themify($themes){
   flex: 2.5;
   position: sticky;
   top: 70px;
   height: calc(100vh - 70px);
   overflow: scroll;
+  background-color: themed("bgSoft");
+  color: themed("textColor");
 
   &::-webkit-scrollbar{
     display: none;
@@ -11,16 +16,17 @@
 
   .container{
     .item{
-      -webkit-box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
--moz-box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
-box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
+      -webkit-box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.09);
+-moz-box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.09);
+box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.09);
 
         padding: 20px;
         margin-bottom: 20px;
+        background-color: themed("bg");
 
 
       span{
-        color:gray;
+        color:themed("textColor");
       }
      .user{
       display: flex;
@@ -50,11 +56,11 @@ box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
         }
 
         p{
-          color: gray;
+          color: themed("textColorSoft");
         }
 
         span{
-          color: #111;
+          color: themed("textColor");
           font-weight: 500;
         }
       }
@@ -81,4 +87,5 @@ box-shadow: 2px 3px 7px -1px rgba(133,133,133,1);
      } 
     }
   }
+}
 }
