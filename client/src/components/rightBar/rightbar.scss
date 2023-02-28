@@ -17,6 +17,7 @@
   }
 
   .container{
+    padding: 20px;
     .item{
       -webkit-box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.09);
 -moz-box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.09);
@@ -25,7 +26,7 @@ box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.09);
         padding: 20px;
         margin-bottom: 20px;
         background-color: themed("bg");
-
+        border-radius: 10px;
 
       span{
         color:themed("textColor");
