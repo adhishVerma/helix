@@ -22,9 +22,9 @@ const Navbar = () => {
       <div className="left">
         <Link to="/" style={{textDecoration: "none"}}>
         <span>HelixSocial</span></Link>
-      <HomeOutlinedIcon/>
-      {darkMode ? <WbSunnyOutlinedIcon onClick={toggle}/> : <DarkModeOutlinedIcon onClick={toggle}/>}
-      <GridViewOutlinedIcon/>
+      <HomeOutlinedIcon className="icon"/>
+      {darkMode ? <WbSunnyOutlinedIcon onClick={toggle} className="icon"/> : <DarkModeOutlinedIcon onClick={toggle} className="icon"/>}
+      <GridViewOutlinedIcon className="icon"/>
       <div className="search">
         <SearchOutlinedIcon/>
         <input type="text" placeholder="search"/>

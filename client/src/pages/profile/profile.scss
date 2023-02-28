@@ -3,6 +3,7 @@
 .profile {
   @include themify($themes) {
     background-color: themed("bgSoft");
+    min-height: 100vh;
 
     .images {
       width: 100%;
@@ -29,72 +30,101 @@
 
     .profileContainer {
       padding: 20px 70px;
-    }
 
-    .userInfo {
-      height: 180px;
-      -webkit-box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.09);
-      -moz-box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.09);
-      box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.09);
-      border-radius: 20px;
-      background-color: themed("bg");
-      color: themed("textColor");
-      padding: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .left {
-        display: flex;
-        flex: 1;
-        gap: 10px;
-        a {
-          text-decoration: none;
-          color: themed("textColorSoft");
-        }
+      @include mobile {
+        padding: 10px;
       }
 
-      .center {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        color: themed("textColorSoft");
+      @include tablet {
+        padding: 20px;
+      }
 
-        span{
-          color: themed("textColor");
-          font-size: 30px;
-          font-weight: bold;
+      .userInfo {
+        height: 180px;
+        -webkit-box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.09);
+        -moz-box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.09);
+        box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.09);
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+          flex-direction: column;
+          height: 30vh;
+          padding: 20px;
+          margin-top: 100px;
         }
 
-        .item{
+        .left {
           display: flex;
-          align-items: center;
-          margin: 5px 0;
+          flex: 1;
           gap: 10px;
-          span{
-            font-size: 13px;
-            font-weight: normal;
+          align-items: center;
+
+          @include tablet {
+            flex-wrap: wrap;
           }
 
+          a {
+            text-decoration: none;
+            color: themed("textColorSoft");
+          }
         }
-      }
 
-      .right {
-        button{
-          border: none;
-          padding: 5px 8px;
-          color: white;
-          cursor: pointer;
-          border-radius: 5px;
-          background-color: #5271ff;
+        .center {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: themed("textColorSoft");
+          gap: 10px;
+
+          span {
+            color: themed("textColor");
+            font-size: 30px;
+            font-weight: bold;
+          }
+
+          .demographic{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 20px;
+          }
+          .item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            gap: 10px;
+
+            span {
+              font-size: 13px;
+              font-weight: normal;
+            }
+
+          }
         }
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 10px;
+
+        .right {
+          button {
+            border: none;
+            padding: 5px 8px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #5271ff;
+          }
+
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 10px;
+        }
       }
     }
   }
