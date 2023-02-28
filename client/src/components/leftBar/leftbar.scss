@@ -6,6 +6,8 @@
     flex: 2;
     position: sticky;
     top: 70px;
+    left: 0;
+    bottom: 0;
     height: calc(100vh - 70px);
     overflow: scroll;
     background-color: themed("bg");

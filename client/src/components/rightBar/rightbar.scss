@@ -2,9 +2,11 @@
 
 .rightbar{
   @include themify($themes){
-  flex: 2.5;
+  flex: 3;
   position: sticky;
   top: 70px;
+  bottom: 0;
+  right: 0;
   height: calc(100vh - 70px);
   overflow: scroll;
   background-color: themed("bgSoft");
@@ -71,9 +73,10 @@ box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.09);
         gap: 10px;
         button{
           border: none;
-          padding: 5px;
+          padding: 5px 8px;
           color: white;
           cursor: pointer;
+          border-radius: 5px;
 
           &:first-child{
             background-color: #5271ff;
