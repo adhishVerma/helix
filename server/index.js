@@ -8,6 +8,7 @@ import commentRoutes from "./routes/comments.js"
 import cors from "cors"
 import cookieParser from "cookie-parser";
 
+
 // middlewares
 app.use(express.json())
 app.use(cors())
